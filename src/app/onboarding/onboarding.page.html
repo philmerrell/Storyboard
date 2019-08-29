@@ -1,0 +1,72 @@
+<ion-content>
+  <ion-button class="dismiss" (click)="dismiss()" size="large" fill="clear">
+    <ion-icon slot="icon-only" name="close"></ion-icon>
+  </ion-button>
+  <ion-slides [options]="slideOpts" #slides>
+    <ion-slide>
+      <ion-card class="welcome-card">
+        <ion-img src="/assets/shapes.svg"></ion-img>
+        <ion-card-header>
+          <ion-card-subtitle>Get Started</ion-card-subtitle>
+          <ion-card-title>Welcome to Storyboard</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Beyond the Major represents a university-wide commitment to helping students understand and articulate the value of their experiences. With increased support in translating their skills for audiences beyond the university, students graduate from Boise State with story to tell.</p>
+          <ion-button (click)="next()" fill="clear" size="large">
+            Next
+            <ion-icon slot="end" name="arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+        <ion-card class="welcome-card">
+          <ion-img src="/assets/slide-3.png"></ion-img>
+          <ion-card-header>
+            <!-- <ion-card-subtitle>Experiential Learning Opportunities</ion-card-subtitle> -->
+            <ion-card-title>Opportunity Inventory</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>This feature provides a searchable database of experiential learning opportunities across campus.</p>
+            <ion-button (click)="next()" fill="clear" size="large">
+              Next
+              <ion-icon slot="end" name="arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="welcome-card">
+        <ion-img src="/assets/slide-2.png"></ion-img>
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Experiential Learning Opportunities</ion-card-subtitle> -->
+          <ion-card-title>Tell Your Story</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Capture your experience through videos, images, text and more. Selectively share your experiences with others.</p>
+          <ion-button (click)="next()" fill="clear" size="large">
+            Next
+            <ion-icon slot="end" name="arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="welcome-card">
+        <ion-img src="/assets/slide-4.png"></ion-img>
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Experiential Learning Opportunities</ion-card-subtitle> -->
+          <ion-card-title>Share Your Profile</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Curate your profile and share your experiences with others.</p>
+          <ion-button color="success" (click)="dismiss()" expand="block" size="large">
+            Get Started
+            <ion-icon slot="end" name="arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

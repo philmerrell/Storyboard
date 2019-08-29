@@ -1,0 +1,84 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div>
+    <img src="/assets/profile_background.jpg">
+  </div>
+  <div padding>
+    <img src="/assets/profile.jpg" style="width: 100px; margin-top: -70px; border-radius: 50%; border: 3px solid var(--ion-color-secondary);">
+    <div style="float: right; margin-top: -20px;">
+      <ion-button fill="clear" color="primary">
+        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      </ion-button>
+      <ion-button size="small" fill="outline" color="tertiary">
+        Edit Profile
+      </ion-button>
+    </div>
+    <h1 style="font-weight: 900;">Sarah Student</h1>
+    <h5 style="color: var(--ion-color-medium)">Looking to apply the lens of Philosophy to the world of tech.</h5>
+    <div style="width: 50%; text-align: center; display: inline-block;">
+      <ion-label style="font-size: 1.4em;" color="primary">80</ion-label><br>
+      <ion-label color="medium">Plotlines</ion-label>
+    </div>
+    <div style="width: 50%; text-align: center; display: inline-block;">
+      <ion-label style="font-size: 1.4em;" color="primary">20</ion-label><br>
+      <ion-label color="medium">Events</ion-label>
+    </div>
+  </div>
+  <ion-card>
+    <ion-list>
+      <ion-list-header color="warning">Discipline</ion-list-header>
+      <ion-item>
+        <ion-label>
+          <strong>
+            Major:
+          </strong>Philosophy
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <strong>
+            Certificate:
+          </strong>User Experience Research
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-card-content>  
+      <h3>I'm good at:</h3>
+      <ion-badge>Handling ambiguity</ion-badge>&nbsp;
+      <ion-badge color="secondary">User Experience</ion-badge>&nbsp;
+      <ion-badge color="tertiary">Interface Design</ion-badge>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
+      <ion-list-header color="primary">Experience</ion-list-header>
+      <ion-item>
+        <ion-icon slot="start" name="briefcase" color="primary"></ion-icon>
+        <ion-label><strong>Oliver Russell:</strong> User Research Internship</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  
+  <ion-card>
+    <ion-list>
+      <ion-list-header color="tertiary">Portfolio</ion-list-header>
+      <ion-item detail>
+        <ion-icon slot="start" name="image" color="success"></ion-icon>
+        <ion-label>
+          User Journey Map
+        </ion-label>
+      </ion-item>
+      <ion-item detail>
+        <ion-icon slot="start" color="success" name="image"></ion-icon>
+        <ion-label>Product Mockups</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+</ion-content>

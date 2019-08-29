@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Opportunities</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar></ion-searchbar>
+  <ion-card *ngFor="let opportunity of opportunities">
+    <ion-card-header *ngIf="opportunity.type === 'Event'" color="success">{{ opportunity.type }}</ion-card-header>
+    <ion-card-header *ngIf="opportunity.type === 'Course'" color="warning">{{ opportunity.type }}</ion-card-header>
+    <ion-card-header *ngIf="opportunity.type === 'Employment'" color="danger">{{ opportunity.type }}</ion-card-header>
+    <img [src]="opportunity.image">
+    <ion-card-content>
+      <ion-card-subtitle>{{ opportunity.source }}</ion-card-subtitle>
+      <ion-card-title>{{ opportunity.title }}</ion-card-title>
+      <!-- <ion-badge>{{ opportunity.type }}</ion-badge> -->
+      <p>{{ opportunity.description }}</p>
+      <ion-button fill="outline" color="primary">
+        <ion-icon *ngIf="opportunity.type === 'Event'" name="calendar" slot="start"></ion-icon>
+        <ion-icon *ngIf="opportunity.type === 'Course'" name="school" slot="start"></ion-icon>
+        <ion-icon *ngIf="opportunity.type === 'Employment'" name="card" slot="start"></ion-icon>
+        {{ opportunity.type }}
+      </ion-button>
+      <ion-button fill="outline" color="tertiary">
+        Learn More
+        <ion-icon name="arrow-forward" slot="end"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

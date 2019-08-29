@@ -1,0 +1,260 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Storyboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <h1 padding style="font-weight: 900;">Tell Your Story</h1>
+  <div *ngIf="!terms.length" padding>
+    <p>Start capturing your experiences through words, images, videos and audio recordings.
+      Use this timeline to capture your story. Share to your social media circles and promote items 
+      to your Storyboard profile.
+    </p>
+  </div> -->
+  <!-- <div *ngIf="terms.length">
+    <ion-list *ngFor="let term of terms">
+      <ion-list-header color="success">{{ term.termName }}</ion-list-header>
+      <ion-item *ngFor="let item of term.items"></ion-item>
+    </ion-list>
+  </div> -->
+  <!-- <ion-card *ngIf="terms.length">
+    <div style="position: relative;">
+        <ion-fab vertical="center" horizontal="center" slot="fixed">
+          <ion-fab-button color="warning">
+            <ion-icon name="play"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      <img src="https://img.youtube.com/vi/y_g-fm9kpO4/maxresdefault.jpg">
+    </div>
+    <ion-card-content>
+      <ion-card-subtitle>Video</ion-card-subtitle>
+        <ion-card-title>
+          First Day of Class
+        </ion-card-title>
+        <p>My initial thoughts and feelings on the first day of Spring 2020!</p>
+    </ion-card-content>
+  </ion-card> -->
+  
+  <div>
+    <h1 padding inViewport [inViewportOptions]="{ threshold: [0] }"  (inViewportAction)="setTitle($event, 'Spring 2020')" style="font-weight: 900;">Spring 2020</h1>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="auto">
+          <div style="text-align: center; padding-top: 8px; height: 50px; width: 50px; border-radius: 50%; background: var(--ion-color-success);">
+            <ion-icon name="image" size="large" slot="icon-only" color="light"></ion-icon>
+          </div>
+          
+        </ion-col>
+        <ion-col>
+          <ion-label color="medium">{{ '2019-08-23T13:00:00.000Z' | timeAgo }}</ion-label>
+          <h3 style="color: var(--ion-color-success); margin-top: 0px; margin-bottom: 5px;">Storyboard Exercise</h3>
+          <p style="margin-top: 5px;">My first year of experiences and common themes.</p>
+          <div>
+              <img style="border-radius: 10px;" src="/assets/Storyboard.jpg">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div style="text-align: center;">
+        <span style="display: inline-block; width: 1px; border-left:2px solid var(--ion-color-medium);height:40px"></span>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="auto">
+          <div style="text-align: center; padding-top: 8px; height: 50px; width: 50px; border-radius: 50%; background: var(--ion-color-tertiary);">
+            <ion-icon name="videocam" size="large" slot="icon-only" color="light"></ion-icon>
+          </div>
+          
+        </ion-col>
+        <ion-col>
+          <ion-label color="medium">{{ '2019-08-22' | timeAgo }}</ion-label>
+          <h3 style="color: var(--ion-color-tertiary); margin-top: 0px; margin-bottom: 5px;">Final Presentation Comm 101</h3>
+          <p style="margin-top: 5px;">A recording of my final presentation</p>
+          <div style="position: relative;">
+              <ion-fab vertical="center" horizontal="center" slot="fixed">
+                <ion-fab-button color="tertiary">
+                  <ion-icon name="play"></ion-icon>
+                </ion-fab-button>
+              </ion-fab>
+            <img style="border-radius: 10px;" src="/assets/presentation.png">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div style="text-align: center;">
+        <span style="display: inline-block; width: 1px; border-left:2px solid var(--ion-color-medium);height:40px"></span>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="auto">
+          <div style="text-align: center; padding-top: 8px; height: 50px; width: 50px; border-radius: 50%; background: var(--ion-color-primary);">
+            <ion-icon name="document" size="large" slot="icon-only" color="light"></ion-icon>
+          </div>
+          
+        </ion-col>
+        <ion-col>
+          <ion-label color="medium">{{ '2019-08-20' | timeAgo }}</ion-label>
+          <h3 style="color: var(--ion-color-primary); margin-top: 0px; margin-bottom: 5px;">UF 200 Citizenship</h3>
+          <p style="margin-top: 5px;">On becoming an engaged citizen.</p>
+          <div>
+            <ion-button href="https://docs.google.com/document/d/1pBC2pdPuMz96IAlt1hZUEm8Os5LRHd2k37-wLQN0C-Y/edit#" target="_blank" fill="outline" expand="block" color="primary">
+              <ion-icon name="document" slot="start"></ion-icon>
+              Open in Docs
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div style="text-align: center;">
+        <span style="display: inline-block; width: 1px; border-left:2px solid var(--ion-color-medium);height:40px"></span>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="auto">
+          <div style="text-align: center; padding-top: 8px; height: 50px; width: 50px; border-radius: 50%; background: var(--ion-color-danger);">
+            <ion-icon name="microphone" size="large" slot="icon-only" color="light"></ion-icon>
+          </div>
+          
+        </ion-col>
+        <ion-col>
+          <ion-label color="medium">{{ '2019-08-13' | timeAgo }}</ion-label>
+          <h3 style="color: var(--ion-color-danger); margin-top: 0px; margin-bottom: 5px;">Final Project Brainstorm</h3>
+          <!-- <p style="margin-top: 5px;">On becoming and engaged citizen.</p> -->
+          <div>
+            <ion-button fill="outline" expand="block" color="danger">
+              <ion-icon name="play" slot="start"></ion-icon>
+              Play
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <div inViewport [inViewportOptions]="{ threshold: [0] }"  (inViewportAction)="setTitle($event, 'Spring 2020')">
+
+      <h1 padding style="font-weight: 900;" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="setTitle($event, 'Fall 2019')">Fall 2019</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="auto">
+            <div style="text-align: center; padding-top: 8px; height: 50px; width: 50px; border-radius: 50%; background: var(--ion-color-tertiary);">
+              <ion-icon name="videocam" size="large" slot="icon-only" color="light"></ion-icon>
+            </div>
+            
+          </ion-col>
+          <ion-col>
+            <ion-label color="medium">{{ '2019-08-15' | timeAgo }}</ion-label>
+            <h3 style="color: var(--ion-color-tertiary); margin-top: 0px; margin-bottom: 5px;">First Day of Class</h3>
+            <p style="margin-top: 5px;">My initial thoughts and feelings on the first day of Spring 2020!</p>
+            <div style="position: relative;">
+                <ion-fab vertical="center" horizontal="center" slot="fixed">
+                  <ion-fab-button color="tertiary">
+                    <ion-icon name="play"></ion-icon>
+                  </ion-fab-button>
+                </ion-fab>
+              <img style="border-radius: 10px;" src="https://img.youtube.com/vi/y_g-fm9kpO4/maxresdefault.jpg">
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div style="text-align: center;">
+          <span style="display: inline-block; width: 1px; border-left:2px solid var(--ion-color-medium);height:40px"></span>
+      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="auto">
+            <div style="text-align: center; padding-top: 8px; height: 50px; width: 50px; border-radius: 50%; background: var(--ion-color-primary);">
+              <ion-icon name="document" size="large" slot="icon-only" color="light"></ion-icon>
+            </div>
+            
+          </ion-col>
+          <ion-col>
+            <ion-label color="medium">{{ '2019-08-13' | timeAgo }}</ion-label>
+            <h3 style="color: var(--ion-color-primary); margin-top: 0px; margin-bottom: 5px;">UF 100 Reflection</h3>
+            <p style="margin-top: 5px;">My reflection on becoming a learner!</p>
+            <div>
+              <ion-button fill="outline" expand="block" color="primary">
+                <ion-icon name="document" slot="start"></ion-icon>
+                Open in Docs
+              </ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div style="text-align: center;">
+          <span style="display: inline-block; width: 1px; border-left:2px solid var(--ion-color-medium);height:40px"></span>
+      </div>
+    </div>
+    <h1 padding style="font-weight: 900;" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="setTitle($event, 'Summer 2019')">Summer 2019</h1>
+    <ion-grid>
+        <ion-row>
+          <ion-col size="auto">
+            <div style="text-align: center; padding-top: 8px; height: 50px; width: 50px; border-radius: 50%; background: var(--ion-color-tertiary);">
+              <ion-icon name="videocam" size="large" slot="icon-only" color="light"></ion-icon>
+            </div>
+            
+          </ion-col>
+          <ion-col>
+            <ion-label color="medium">{{ '2019-08-15' | timeAgo }}</ion-label>
+            <h3 style="color: var(--ion-color-tertiary); margin-top: 0px; margin-bottom: 5px;">First Day of Class</h3>
+            <p style="margin-top: 5px;">My initial thoughts and feelings on the first day of Spring 2020!</p>
+            <div style="position: relative;">
+                <ion-fab vertical="center" horizontal="center" slot="fixed">
+                  <ion-fab-button color="tertiary">
+                    <ion-icon name="play"></ion-icon>
+                  </ion-fab-button>
+                </ion-fab>
+              <img style="border-radius: 10px;" src="https://img.youtube.com/vi/y_g-fm9kpO4/maxresdefault.jpg">
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    <div style="text-align: center;">
+        <span style="display: inline-block; width: 1px; border-left:2px solid var(--ion-color-medium);height:40px"></span>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="auto">
+          <div style="text-align: center; padding-top: 8px; height: 50px; width: 50px; border-radius: 50%; background: var(--ion-color-primary);">
+            <ion-icon name="document" size="large" slot="icon-only" color="light"></ion-icon>
+          </div>
+          
+        </ion-col>
+        <ion-col>
+          <ion-label color="medium">{{ '2019-08-13' | timeAgo }}</ion-label>
+          <h3 style="color: var(--ion-color-primary); margin-top: 0px; margin-bottom: 5px;">UF 100 Reflection</h3>
+          <p style="margin-top: 5px;">My reflection on becoming a learner!</p>
+          <div>
+            <ion-button fill="outline" expand="block" color="primary">
+              <ion-icon name="document" slot="start"></ion-icon>
+              Open in Docs
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger" >
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button color="tertiary"><ion-icon name="create"></ion-icon></ion-fab-button>
+    <ion-fab-button (click)="takePicture()" color="success"><ion-icon name="camera"></ion-icon></ion-fab-button>
+    <ion-fab-button color="warning"><ion-icon name="videocam"></ion-icon></ion-fab-button>
+    <ion-fab-button color="primary"><ion-icon name="microphone"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
